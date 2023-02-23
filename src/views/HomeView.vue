@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <p>Counter Clicked: {{ count }}</p>
+    <buttonCounter @click="handleClick($event)" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import buttonCounter from "@/components/Button-Counter.vue";
 
 export default {
-  name: "HomeView",
+  name: "ButtonCounter",
   components: {
-    HelloWorld,
+    buttonCounter,
+  },
+  methods: {
+    handleClick(event) {
+      this.count = event.count;
+    },
+  },
+  data() {
+    return {
+      count: 0,
+    };
   },
 };
 </script>
