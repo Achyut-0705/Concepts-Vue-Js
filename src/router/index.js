@@ -31,9 +31,15 @@ const routes = [
     name: "Currency",
     component: CurrencyView,
   },
+  {
+    path: "/user-details",
+    name: "user-details",
+    component: () => import("../views/UserDetailsView.vue"),
+  },
 ];
 
 const router = new VueRouter({
+  mode: "history",
   routes,
 });
 

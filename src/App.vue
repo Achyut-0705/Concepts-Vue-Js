@@ -4,7 +4,8 @@
       <router-link to="/">Counter</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/books">Books</router-link> |
-      <router-link to="/currency">Currency</router-link>
+      <router-link to="/currency">Currency</router-link> |
+      <router-link to="/user-details">User Details</router-link>
     </nav>
     <router-view />
   </div>
